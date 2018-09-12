@@ -2,8 +2,11 @@
   become: yes
 
   tasks:
-  - name: Update and upgrade apt packages    
+  - name: Update apt packages    
     apt:      
       update_cache: yes
       cache_valid_time: 8400 # 1 day
+
+  - name: Upgrade apt packages
+    apt:
       upgrade: yes
