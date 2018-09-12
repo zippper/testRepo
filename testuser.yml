@@ -1,0 +1,13 @@
+- name: test become
+  hosts: all
+
+  tasks:
+    - name: Test become
+      become_user: admin
+      become: yes
+      command: whoami
+      register: the_user
+
+    - name: Debug become
+      debug:
+        msg: "{{ the_user }}"
