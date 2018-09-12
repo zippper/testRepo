@@ -8,5 +8,8 @@
       cache_valid_time: 8400 # 1 day
 
   - name: Upgrade apt packages
+    become: true
+    become_method: sudo
+    become_user: admin
     apt:
       upgrade: yes
