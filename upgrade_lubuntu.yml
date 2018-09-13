@@ -1,13 +1,13 @@
 - hosts: all
 
   tasks:
-  - name: Update apt packages    
+  - name: Update apt packages
+    become: true
     apt:      
       update_cache: yes
       cache_valid_time: 8400 # 1 day
-    become: true
 
   - name: Upgrade apt packages
+    become: true
     apt:
       upgrade: yes
-    become: true
