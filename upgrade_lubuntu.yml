@@ -2,10 +2,11 @@
 
   tasks:
   - name: Update apt packages
-    become: yes
-    become_user: admin
-    apt:      
-      update_cache: yes
+    shell: sudo apt-get update
+#    become: yes
+#    become_user: larisa
+#    apt:      
+#      update_cache: yes
 #      cache_valid_time: 8400 # 1 day
 
   - name: Upgrade apt packages
