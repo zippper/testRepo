@@ -4,7 +4,7 @@
   tasks:
     - name: Test become
 #      become_user: admin
-      become: yes
+#      become: yes
       command: whoami
       register: the_user
 
