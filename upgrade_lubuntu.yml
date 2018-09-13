@@ -10,6 +10,5 @@
   - name: Upgrade apt packages
     become: true
     become_method: sudo
-    become_user: admin
     apt:
       upgrade: yes
