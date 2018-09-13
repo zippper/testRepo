@@ -3,8 +3,8 @@
 
   tasks:
     - name: Test become
-      become_user: admin
-      become: yes
+#      become_user: admin
+#      become: yes
       command: whoami
       register: the_user
 
