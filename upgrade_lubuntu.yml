@@ -10,5 +10,6 @@
 
   - name: Upgrade apt packages
     become: yes
+	become_method: sudo
     apt:
       upgrade: yes
