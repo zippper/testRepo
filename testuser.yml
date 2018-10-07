@@ -3,9 +3,9 @@
 
   tasks:
     - name: Test become
-      become_user: admin
+#      become_user: admin
       become: yes
-      command: whoami
+      command: apt-get update
       register: the_user
 
     - name: Debug become
