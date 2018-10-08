@@ -5,7 +5,7 @@
     - name: Test become
 #      become_user: admin
       become: yes
-      command: apt-get update
+      command: sudo apt-get update
       register: the_user
 
     - name: Debug become
