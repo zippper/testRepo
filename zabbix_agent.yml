@@ -8,11 +8,23 @@
       name: zabbix-agent
       state: present
 
-  - name: copy zabbix configuration file
+#  - name: copy zabbix configuration file
 #    copy: src=./conf/zabbix_agentd.conf dest=/etc/zabbix_agentd.conf seuser=system_u
-    copy: 
-      src: /etc/zabbix/zabbix_agentd.conf 
-      dest: /etc/zabbix/zabbix_agentd.conf
+#    copy: 
+#      src: /etc/zabbix/zabbix_agentd.conf 
+#      dest: /etc/zabbix/zabbix_agentd.conf
+
+  - name config agent
+    lineinfile:
+      path: /etc/zabbix/zabbix_agentd.conf
+      line: Server=127.0.0.1
+      state: absent
+
+  - name config agent
+    lineinfile:
+      path: /etc/zabbix/zabbix_agentd.conf
+      line: Server=192.168.0.27
+      state: present
 
     notify:
       - Start Zabbix-agent
