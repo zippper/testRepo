@@ -26,10 +26,6 @@
       line: Server=192.168.0.27
       state: present
 
-    notify:
-      - Start Zabbix-agent
-
-  handlers:
   - name: Start zabbix-agent
     service: 
       name: zabbix-agent 
