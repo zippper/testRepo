@@ -14,13 +14,13 @@
 #      src: /etc/zabbix/zabbix_agentd.conf 
 #      dest: /etc/zabbix/zabbix_agentd.conf
 
-  - name config agent
+  - name: remove default config
     lineinfile:
       path: /etc/zabbix/zabbix_agentd.conf
       line: Server=127.0.0.1
       state: absent
 
-  - name config agent
+  - name: config agent
     lineinfile:
       path: /etc/zabbix/zabbix_agentd.conf
       line: Server=192.168.0.27
