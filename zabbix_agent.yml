@@ -14,6 +14,12 @@
 #      src: /etc/zabbix/zabbix_agentd.conf 
 #      dest: /etc/zabbix/zabbix_agentd.conf
 
+  - name: Stop zabbix-agent
+    service: 
+      name: zabbix-agent 
+      state: stopped 
+    ignore_errors: yes
+
   - name: remove default config
     lineinfile:
       path: /etc/zabbix/zabbix_agentd.conf
