@@ -22,7 +22,7 @@
 
   - name: Add user zabbix to group adm
     become: yes
-    shell: adduser zabbix adm
+    shell: sudo adduser zabbix adm
 
   - name: Stop zabbix-agent
     service: 
