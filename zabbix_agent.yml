@@ -15,10 +15,14 @@
 #      src: /etc/zabbix/zabbix_agentd.conf 
 #      dest: /etc/zabbix/zabbix_agentd.conf
 
+#	This fails with access error
+#  - name: Add user zabbix to group adm
+#    user:
+#      name: zabbix
+#      group: adm
+
   - name: Add user zabbix to group adm
-    user:
-      name: zabbix
-      group: adm
+    shell: sudo adduser zabbix adm
 
   - name: Stop zabbix-agent
     service: 
