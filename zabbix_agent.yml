@@ -15,10 +15,10 @@
 #      dest: /etc/zabbix/zabbix_agentd.conf
 
   - name: Add user zabbix to group adm
+    become: yes
     user:
       name: zabbix
       group: adm
-    become: yes
 
   - name: Stop zabbix-agent
     service: 
