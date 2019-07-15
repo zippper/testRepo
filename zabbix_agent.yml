@@ -1,7 +1,6 @@
 ---
 
 - hosts: all
-  become: yes
   tasks:
 
   - name: install zabbix-agent
@@ -22,7 +21,8 @@
 #      group: adm
 
   - name: Add user zabbix to group adm
-    shell: sudo adduser zabbix adm
+    become: yes
+    shell: adduser zabbix adm
 
   - name: Stop zabbix-agent
     service: 
