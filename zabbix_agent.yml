@@ -14,7 +14,7 @@
 #      src: /etc/zabbix/zabbix_agentd.conf 
 #      dest: /etc/zabbix/zabbix_agentd.conf
 
-  - name Add user zabbix 
+  - name: Add user zabbix to group adm
     user:
       name: zabbix
       group: adm
