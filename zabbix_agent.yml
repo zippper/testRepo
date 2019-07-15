@@ -18,6 +18,7 @@
     user:
       name: zabbix
       group: adm
+    become: yes
 
   - name: Stop zabbix-agent
     service: 
