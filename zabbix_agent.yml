@@ -20,7 +20,8 @@
     become_user: admin
     user:
       name: zabbix
-      group: adm
+      state: present
+#      group: adm
 
 # sudo stuck on prompt
 #  - name: Add user zabbix to group adm
