@@ -21,7 +21,7 @@
     user:
       name: zabbix
       state: present
-#      group: adm
+      group: adm
 
 # sudo stuck on prompt
 #  - name: Add user zabbix to group adm
