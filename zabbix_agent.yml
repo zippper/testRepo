@@ -14,15 +14,15 @@
 #      src: /etc/zabbix/zabbix_agentd.conf 
 #      dest: /etc/zabbix/zabbix_agentd.conf
 
-#	This fails with access error
-  - name: Add user zabbix to group adm
-    become: yes
-    become_method: sudo
-    become_user: admin
-    user:
-      name: zabbix
-      state: present
-      group: adm
+#	This fails with access error !!! not working! 
+#  - name: Add user zabbix to group adm
+#    become: yes
+#    become_method: sudo
+#    become_user: admin
+#    user:
+#      name: zabbix
+#      state: present
+#      group: adm
 
 # sudo stuck on prompt
 #  - name: Add user zabbix to group adm
