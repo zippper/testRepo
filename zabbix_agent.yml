@@ -41,10 +41,22 @@
       line: Server=127.0.0.1
       state: absent
 
+  - name: remove default config
+    lineinfile:
+      path: /etc/zabbix/zabbix_agentd.conf
+      line: ServerActive=127.0.0.1
+      state: absent
+
   - name: config agent
     lineinfile:
       path: /etc/zabbix/zabbix_agentd.conf
       line: Server=192.168.0.27
+      state: present
+
+  - name: config agent
+    lineinfile:
+      path: /etc/zabbix/zabbix_agentd.conf
+      line: ServerActive=192.168.0.27
       state: present
 
   - name: Start zabbix-agent
