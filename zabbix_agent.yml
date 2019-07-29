@@ -44,6 +44,12 @@
   - name: remove default config
     lineinfile:
       path: /etc/zabbix/zabbix_agentd.conf
+      line: Hostname=Zabbix server
+      state: absent
+
+  - name: remove default config
+    lineinfile:
+      path: /etc/zabbix/zabbix_agentd.conf
       line: Server=127.0.0.1
       state: absent
 
