@@ -3,6 +3,12 @@
 - hosts: all
   tasks:
 
+  - name: Stop zabbix-agent
+    service: 
+      name: zabbix-agent 
+      state: stopped 
+    ignore_errors: yes
+
   - name: install zabbix-agent
     apt:
       name: zabbix-agent
