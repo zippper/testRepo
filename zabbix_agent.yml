@@ -47,13 +47,13 @@
       line: ServerActive=127.0.0.1
       state: absent
 
-  - name: config agent
+  - name: config agent Server
     lineinfile:
       path: /etc/zabbix/zabbix_agentd.conf
       line: Server=192.168.0.27
       state: present
 
-  - name: config agent
+  - name: config agent ServerActive
     lineinfile:
       path: /etc/zabbix/zabbix_agentd.conf
       line: ServerActive=192.168.0.27
