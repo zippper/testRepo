@@ -6,7 +6,7 @@
   - name: install zabbix-agent
     apt:
       name: zabbix-agent
-      state: present
+      state: latest
 
 #  - name: copy zabbix configuration file
 #    copy: src=./conf/zabbix_agentd.conf dest=/etc/zabbix_agentd.conf seuser=system_u
